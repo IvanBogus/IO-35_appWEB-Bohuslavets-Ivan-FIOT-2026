@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Додати студента | StudentLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="../index.html">StudentLab</a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Відкрити навігацію"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+
+                <nav class="site-nav" id="site-navigation" aria-label="Головна навігація">
+          <a href="../index.html" class="nav-link">Головна</a>
+          <a href="students.html" class="nav-link">Студенти</a>
+          <a href="groups.html" class="nav-link">Групи</a>
+          <a href="add-student.html" class="nav-link">Додати студента</a>
+          <a href="profile.html" class="nav-link">Профіль</a>
+          <a href="login.html" class="nav-link">Вхід</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="content-section page-section">
+        <div class="container section-heading">
+          <p class="section-label">Додати студента</p>
+          <h1 class="page-title">Форма додавання нового студента</h1>
+          <p class="section-description">
+            Заповніть основні дані студента та перевірте правильність полів перед збереженням запису.
+          </p>
+        </div>
+
+        <div class="container">
+          <article class="card form-section">
+            <form id="student-form" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="new-student-name">Ім'я та прізвище</label>
+                  <input type="text" id="new-student-name" name="name" placeholder="Введіть ПІБ студента">
+                  <p class="field-error" id="name-error"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="new-student-group">Група</label>
+                  <select id="new-student-group" name="group">
+                    <option value="">Оберіть групу</option>
+                  </select>
+                  <p class="field-error" id="group-error"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="new-student-status">Статус</label>
+                  <select id="new-student-status" name="status">
+                    <option value="">Оберіть статус</option>
+                    <option value="Активний">Активний</option>
+                    <option value="У відпустці">У відпустці</option>
+                    <option value="Відрахований">Відрахований</option>
+                  </select>
+                  <p class="field-error" id="status-error"></p>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="button button-primary">Зберегти</button>
+                <button type="reset" class="button button-secondary">Очистити</button>
+              </div>
+
+              <p class="form-message" id="form-message" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+            <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 StudentLab. Лабораторний проєкт з веброзробки.</p>
+        <a href="about.html">Про застосунок</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/students.js"></script>
+  <script src="../js/form.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+
+
